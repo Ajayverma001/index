@@ -1,0 +1,106 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone {
+    width: 350px;
+    height: 550px;
+    box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.488);
+    border-radius: 20px;
+    overflow-x: hidden;
+    transition: all ease 0.5s;
+}
+
+.phone .frame {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: linear-gradient(35deg, #114d0e, #000000, #171b59);
+}
+
+.phone h1 {
+    padding: 10px 20px;
+}
+
+.allstatus {
+    width: 100%;
+    height: calc(100% - 62px);
+    overflow-y: auto;
+}
+
+.allstatus::-webkit-scrollbar {
+    display: none;
+}
+
+.status {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 20px;
+    border-bottom: 2px solid rgba(145, 145, 145, 0.589);
+    position: relative;
+    cursor: pointer;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+}
+
+.status img {
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    object-fit: cover;
+    padding: 2px;
+    border: 2px solid green;
+}
+
+.detail h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.detail h4 {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(55, 55, 55);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+}
